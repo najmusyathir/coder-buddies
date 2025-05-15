@@ -17,4 +17,17 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+
+// Learn related route
+Route::middleware(['auth'])->group(function () {
+    Route::view('/learn', "learn.index")->name('learn.index');
+});
+
+// Quiz related route
+Route::middleware(['auth'])->group(function () {
+    Route::view('/quiz', "quiz.index")->name('quiz.index');
+});
+
+
+
+require __DIR__ . '/auth.php';

@@ -1,4 +1,10 @@
 <x-app-layout>
+    <x-slot name="header">
+        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+            {{ __('Halaman Utama') }}
+        </h2>
+    </x-slot>
+
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
@@ -12,7 +18,7 @@
                 <!-- Card Sections -->
                 <div class="flex w-full items-center justify-center">
                     <div class="grid grid-cols-1 md:grid-cols-2 max-w-[600px] gap-6">
-                        <a href="{{ route('learn.index') }}"
+                        <a
                             class="bg-white overflow-hidden p-5 rounded-xl shadow-lg transform hover:scale-105 transition cursor-pointer">
                             <img src="/images/1.jpg" alt="Learn Image" class="w-full object-cover">
                             <div class="py-5">
@@ -22,7 +28,7 @@
                             </div>
                         </a>
 
-                        <a href="{{ route('quiz.index') }}"
+                        <a
                             class="bg-white p-5 rounded-xl shadow-lg transform hover:scale-105 transition cursor-pointer">
                             <img src="/images/2.jpg" alt="Play Image" class="w-full object-cover">
                             <div class="py-5">
