@@ -22,7 +22,8 @@ Route::middleware('auth')->group(function () {
 // Learn related route
 Route::middleware(['auth'])->group(function () {
     Route::view('/learn', "learn.index")->name('learn.index');
-    Route::get('/learn/content', [LearnController::class, 'index'] )->name('learn.content');
+    Route::get('/learn/html', [LearnController::class, 'learnHtml'] )->name('learn.html');
+    Route::get('/learn/css', [LearnController::class, 'learnCss'] )->name('learn.css');
 });
 
 // Quiz related route

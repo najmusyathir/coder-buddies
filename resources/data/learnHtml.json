@@ -2,7 +2,7 @@
   {
     "title": "Buat Tajuk Besar",
     "description": "Kod ini buat tajuk utama di laman web.",
-    "code": "<h1>Selamat Datang ke Laman Saya</h1>",
+    "html": "<h1>Selamat Datang ke Laman Saya</h1>",
     "points": [
       "Tag <h1> digunakan untuk tajuk paling besar.",
       "Kamu boleh tukar teks di tengah ikut tajuk kamu sendiri."
@@ -12,7 +12,7 @@
   {
     "title": "Tulis Perenggan",
     "description": "Kod ini menulis satu ayat atau perenggan.",
-    "code": "<p>Saya sedang belajar buat laman web!</p>",
+    "html": "<p>Saya sedang belajar buat laman web!</p>",
     "points": [
       "Tag <p> digunakan untuk menulis ayat.",
       "Kamu boleh letak lebih daripada satu perenggan."
@@ -22,7 +22,7 @@
   {
     "title": "Masukkan Gambar",
     "description": "Kod ini letak satu gambar ke dalam laman web.",
-    "code": "<img src='https://picsum.photos/200' alt='Gambar Contoh'>",
+    "html": "<img src='https://picsum.photos/200' alt='Gambar Contoh'>",
     "points": [
       "src ialah pautan gambar.",
       "alt ialah nama gambar jika gambar tak muncul."
@@ -32,7 +32,7 @@
   {
     "title": "Buat Butang",
     "description": "Kod ini buat satu butang yang boleh ditekan.",
-    "code": "<button>Tekan Saya</button>",
+    "html": "<button>Tekan Saya</button>",
     "points": [
       "Kamu boleh tukar perkataan dalam butang kepada apa sahaja."
     ],
@@ -41,7 +41,7 @@
   {
     "title": "Buat Senarai",
     "description": "Kod ini hasilkan senarai dengan bulatan.",
-    "code": "<ul>\n  <li>Aiskrim</li>\n  <li>Basikal</li>\n</ul>",
+    "html": "<ul>\n  <li>Aiskrim</li>\n  <li>Basikal</li>\n</ul>",
     "points": [
       "Gunakan <ul> untuk senarai tak bernombor.",
       "Setiap item mesti dalam <li>."
@@ -51,7 +51,7 @@
   {
     "title": "Buat Tajuk Kecil",
     "description": "Kod ini buat tajuk kecil di bawah tajuk utama.",
-    "code": "<h2>Bahagian Baru</h2>",
+    "html": "<h2>Bahagian Baru</h2>",
     "points": [
       "<h2> lebih kecil daripada <h1>.",
       "Kamu boleh guna <h3>, <h4> dan seterusnya."
@@ -61,7 +61,7 @@
   {
     "title": "Lompat ke Baris Baru",
     "description": "Kod ini lompat ke baris baru tanpa mula perenggan baru.",
-    "code": "<p>Saya suka kucing.<br>Saya juga suka arnab.</p>",
+    "html": "<p>Saya suka kucing.<br>Saya juga suka arnab.</p>",
     "points": [
       "<br> digunakan untuk turun baris dalam satu perenggan."
     ],
@@ -70,7 +70,7 @@
   {
     "title": "Letakkan Garisan Lurus",
     "description": "Kod ini buat garisan melintang di laman web.",
-    "code": "<hr>",
+    "html": "<hr>",
     "points": [
       "Gunakan <hr> untuk pisahkan bahagian."
     ],
@@ -79,7 +79,7 @@
   {
     "title": "Jadikan Teks Tebal",
     "description": "Kod ini buat ayat kelihatan lebih tebal atau penting.",
-    "code": "<strong>Ini sangat penting!</strong>",
+    "html": "<strong>Ini sangat penting!</strong>",
     "points": [
       "Guna <strong> untuk teks penting atau ditegaskan."
     ],
@@ -88,7 +88,7 @@
   {
     "title": "Buat Pautan ke Laman Web",
     "description": "Kod ini buat ayat yang boleh diklik untuk pergi ke laman lain.",
-    "code": "<a href='https://www.google.com'>Lawat Google</a>",
+    "html": "<a href='https://www.google.com'>Lawat Google</a>",
     "points": [
       "href ialah alamat laman web yang kamu mahu pergi."
     ],

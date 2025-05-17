@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Seksyen Pertama') }}
+            {{ __('Sesi2: Mengenal Basis CSS') }}
         </h2>
     </x-slot>
 
@@ -21,8 +21,8 @@
                     }
                 },
                 openModal() {
-                    this.htmlCode = this.cards[this.index]?.code || '';
-                    this.cssCode = '';
+                    this.htmlCode = this.cards[this.index]?.html || '';
+                    this.cssCode = this.cards[this.index]?.css || '';
                     this.isModalOpen = true;
                 },
                 closeModal() {
@@ -41,15 +41,15 @@
                 runCode() {
                     const iframe = this.$refs.outputFrame;
                     const content = `
-                                                                                                                    <html>
-                                                                                                                        <head>
-                                                                                                                            <style>${this.cssCode ?? ''}</style>
-                                                                                                                        </head>
-                                                                                                                        <body>
-                                                                                                                            ${this.htmlCode ?? ''}
-                                                                                                                        </body>
-                                                                                                                    </html>
-                                                                                                                `;
+                        <html>
+                            <head>
+                                <style>${this.cssCode ?? ''}</style>
+                            </head>
+                            <body>
+                                ${this.htmlCode ?? ''}
+                            </body>
+                        </html>
+                    `;
                     const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
                     iframeDocument.open();
                     iframeDocument.write(content);
@@ -62,10 +62,11 @@
                 <!-- Display Content -->
                 <template x-if="cards[index]">
                     <div class="p-5 rounded-xl shadow-md">
-                        <h2 class="text-2xl font-semibold mb-2 text-blue-800" x-text="cards[index].title"></h2>
+                        <h2 class="text-2xl font-semibold mb-2 text-blue-800"
+                            x-text="`${index + 1}. ${cards[index].title}`"></h2>
                         <p class="mb-2 text-gray-800" x-text="cards[index].description"></p>
 
-                        <pre class="text-sm text-gray-900 my-3 py-2 px-3 bg-gray-100 border border-gray-200 rounded-md"><code class="text-wrap" x-text="cards[index].code"></code></pre>
+                        <pre class="text-sm text-gray-900 my-3 py-2 px-3 bg-gray-100 border border-gray-200 rounded-md"><code class="text-wrap" x-text="cards[index].css"></code></pre>
 
                         <template x-for="(point, idx) in cards[index].points" :key="idx">
                             <p class="mt-2 text-sm text-gray-700">• <span x-text="point"></span></p>

@@ -1,0 +1,112 @@
+[
+  {
+    "title": "Ubah Warna Latar Belakang",
+    "description": "Kod ini menukar warna latar belakang laman web.",
+    "html": "<div class='kawasan'>Selamat Datang!</div>",
+    "css": ".kawasan {\n  background-color: lightblue;\n}",
+    "points": [
+      "Gunakan 'background-color' untuk ubah warna latar belakang.",
+      "Kamu boleh guna nama warna atau kod warna (contoh: #000000)."
+    ],
+    "note": "Pastikan elemen mempunyai kelas atau ID yang betul untuk diubah."
+  },
+  {
+    "title": "Ubah Saiz Teks",
+    "description": "Kod ini menukar saiz teks pada elemen HTML.",
+    "html": "<p class='teks-besar'>Ini teks besar!</p>",
+    "css": ".teks-besar {\n  font-size: 24px;\n}",
+    "points": [
+      "Gunakan 'font-size' untuk ubah saiz teks.",
+      "Kamu boleh guna px, em, atau rem sebagai unit."
+    ],
+    "note": "Saiz terlalu besar boleh menyebabkan susunan laman jadi tak kemas."
+  },
+  {
+    "title": "Letak Bingkai pada Gambar",
+    "description": "Kod ini letakkan bingkai pada gambar.",
+    "html": "<img src='https://picsum.photos/200' alt='Contoh Gambar' class='bingkai'>",
+    "css": ".bingkai {\n  border: 2px solid black;\n  border-radius: 8px;\n}",
+    "points": [
+      "Gunakan 'border' untuk bingkai.",
+      "'border-radius' menjadikan sudut bingkai lebih bulat."
+    ],
+    "note": "Pastikan pautan gambar betul, jika tidak gambar tidak akan keluar."
+  },
+  {
+    "title": "Pusatkan Elemen",
+    "description": "Kod ini memusatkan elemen pada laman web.",
+    "html": "<div class='pusat'>Selamat Datang!</div>",
+    "css": ".pusat {\n  text-align: center;\n}",
+    "points": [
+      "'text-align: center' untuk teks.",
+      "'margin: auto' boleh digunakan untuk kotak atau elemen blok."
+    ],
+    "note": "Untuk elemen blok penuh, tambah 'display: block'."
+  },
+  {
+    "title": "Tukar Jenis Font",
+    "description": "Kod ini menukar jenis tulisan pada teks.",
+    "html": "<p class='tulisan'>Ini tulisan cantik!</p>",
+    "css": ".tulisan {\n  font-family: 'Arial', sans-serif;\n}",
+    "points": [
+      "Gunakan 'font-family' untuk tukar jenis tulisan.",
+      "Kamu boleh senaraikan banyak jenis tulisan; jika satu gagal, ia guna yang seterusnya."
+    ],
+    "note": "Pastikan nama tulisan betul, jika tidak ia akan guna default."
+  },
+  {
+    "title": "Ubah Lebar dan Tinggi Gambar",
+    "description": "Kod ini menukar saiz gambar pada laman web.",
+    "html": "<img src='https://picsum.photos/200' alt='Contoh Gambar' class='saiz-gambar'>",
+    "css": ".saiz-gambar {\n  width: 300px;\n  height: 200px;\n}",
+    "points": [
+      "Gunakan 'width' dan 'height' untuk ubah saiz gambar.",
+      "Pastikan gambar tak pecah bila diubah saiz."
+    ],
+    "note": "Jangan paksa saiz terlalu kecil, gambar akan jadi kabur."
+  },
+  {
+    "title": "Letak Bayang pada Kotak",
+    "description": "Kod ini menambah bayang pada kotak.",
+    "html": "<div class='kotak-bayang'>Ini kotak ada bayang!</div>",
+    "css": ".kotak-bayang {\n  box-shadow: 5px 5px 10px gray;\n}",
+    "points": [
+      "Gunakan 'box-shadow' untuk bayang.",
+      "Kamu boleh tukar jarak dan warna bayang."
+    ],
+    "note": "Terlalu banyak bayang boleh nampak tak kemas."
+  },
+  {
+    "title": "Buat Butang Berwarna",
+    "description": "Kod ini buat butang dengan warna latar belakang.",
+    "html": "<button class='butang-merah'>Tekan Saya</button>",
+    "css": ".butang-merah {\n  background-color: red;\n  color: white;\n  padding: 10px 20px;\n  border: none;\n  border-radius: 5px;\n}",
+    "points": [
+      "'background-color' untuk warna latar.",
+      "'padding' untuk ruang dalam butang."
+    ],
+    "note": "Jangan lupa 'border-radius' jika mahu sudut bulat."
+  },
+  {
+    "title": "Ubah Warna Teks",
+    "description": "Kod ini menukar warna teks pada elemen HTML.",
+    "html": "<p class='teks-merah'>Ini teks berwarna merah!</p>",
+    "css": ".teks-merah {\n  color: red;\n}",
+    "points": [
+      "Gunakan 'color' untuk tukar warna teks.",
+      "Kamu boleh guna nama warna atau kod heksadesimal (#ff0000)."
+    ],
+    "note": "Warna teks yang terlalu cerah boleh susah untuk dibaca."
+  },
+  {
+    "title": "Letak Ruang Antara Elemen",
+    "description": "Kod ini letak ruang antara elemen.",
+    "html": "<div class='ruang'>Ini ada ruang!</div>",
+    "css": ".ruang {\n  margin: 10px;\n  padding: 10px;\n}",
+    "points": [
+      "'margin' untuk ruang luar.",
+      "'padding' untuk ruang dalam."
+    ],
+    "note": "Jangan guna nilai negatif, ia akan susahkan susunan elemen."
+  }
+]
