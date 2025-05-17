@@ -20,9 +20,9 @@
                     <div class="grid grid-cols-1 max-w-[300px] gap-6">
                         <a href="{{ route('learn.html') }}"
                             class="bg-white p-5 rounded-xl shadow-lg transform hover:scale-105 transition cursor-pointer">
-                            <img src="/images/learn.jpg" alt="Play Image" class="w-full object-cover">
+                            <img src="/images/html.jpg" alt="Play Image" class="w-full object-cover">
                             <div class="py-5">
-                                <h2 class="text-2xl font-bold text-blue-500 mb-2">Mengenal Basis HTML</h2>
+                                <h2 class="text-2xl font-bold text-orange-500 mb-2">Mengenal Basis HTML</h2>
                                 <p class="text-gray-600">Mula mengeksplorasi dunia<span class="italic"> Coding</span>
                                     sekarang!</p>
                             </div>
@@ -32,7 +32,7 @@
                     <div class="grid grid-cols-1 max-w-[300px] gap-6">
                         <a href="{{ route('learn.css') }}"
                             class="bg-white p-5 rounded-xl shadow-lg transform hover:scale-105 transition cursor-pointer">
-                            <img src="/images/learn.jpg" alt="Play Image" class="w-full object-cover">
+                            <img src="/images/css.jpg" alt="Play Image" class="w-full object-cover">
                             <div class="py-5">
                                 <h2 class="text-2xl font-bold text-blue-500 mb-2">Mengenal Basis CSS</h2>
                                 <p class="text-gray-600">Mula mengeksplorasi dunia<span class="italic"> Coding</span>
