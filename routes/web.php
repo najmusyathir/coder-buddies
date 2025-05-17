@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LearnController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,6 +22,7 @@ Route::middleware('auth')->group(function () {
 // Learn related route
 Route::middleware(['auth'])->group(function () {
     Route::view('/learn', "learn.index")->name('learn.index');
+    Route::get('/learn/content', [LearnController::class, 'index'] )->name('learn.content');
 });
 
 // Quiz related route

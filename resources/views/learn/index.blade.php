@@ -18,13 +18,12 @@
                 <!-- Card Sections -->
                 <div class="flex w-full items-center justify-center">
                     <div class="grid grid-cols-1 max-w-[300px] gap-6">
-                        <a href="{{ route('quiz.index') }}"
+                        <a href="{{ route('learn.content') }}"
                             class="bg-white p-5 rounded-xl shadow-lg transform hover:scale-105 transition cursor-pointer">
-                            <img src="/images/2.jpg" alt="Play Image" class="w-full object-cover">
+                            <img src="/images/learn.jpg" alt="Play Image" class="w-full object-cover">
                             <div class="py-5">
-                                <h2 class="text-2xl font-bold text-blue-500 mb-2">Bermain Sambil Belajar</h2>
-                                <p class="text-gray-600">Kuiz mencabar minda menggabungkan keseronokan dan kuasai
-                                    kemahiran <span class="italic">Coding</span>!</p>
+                                <h2 class="text-2xl font-bold text-blue-500 mb-2">Mula Sekarang</h2>
+                                <p class="text-gray-600">Mula mengeksplorasi dunia<span class="italic"> Coding</span> sekarang!</p>
                             </div>
                         </a>
                     </div>

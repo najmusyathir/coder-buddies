@@ -20,7 +20,7 @@
                     <div class="grid grid-cols-1 max-w-[300px] gap-6">
                         <a href="{{ route('learn.index') }}"
                             class="bg-white overflow-hidden p-5 rounded-xl shadow-lg transform hover:scale-105 transition cursor-pointer">
-                            <img src="/images/1.jpg" alt="Learn Image" class="w-full object-cover">
+                            <img src="/images/learn.jpg" alt="Learn Image" class="w-full object-cover">
                             <div class="py-5">
                                 <h2 class="text-2xl font-bold text-blue-500 mb-2">Belajar Secara Interaktif</h2>
                                 <p class="text-gray-600">Pembelajaran interaktif yang menginspirasi dan menyeronokkan.
