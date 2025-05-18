@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "question": "Apakah properti CSS yang digunakan untuk menukar warna teks?",
+        "options": [
+            { "id": "A", "text": "color" },
+            { "id": "B", "text": "background-color" },
+            { "id": "C", "text": "font-size" },
+            { "id": "D", "text": "text-align" }
+        ],
+        "answer": "A",
+        "explanation": "Properti 'color' digunakan untuk menetapkan warna teks."
+    },
+    {
+        "id": 2,
+        "question": "Bagaimana cara menetapkan latar belakang berwarna biru pada elemen dengan CSS?",
+        "options": [
+            { "id": "A", "text": "background-color: blue;" },
+            { "id": "B", "text": "color: blue;" },
+            { "id": "C", "text": "border-color: blue;" },
+            { "id": "D", "text": "font-color: blue;" }
+        ],
+        "answer": "C",
+        "explanation": "Properti 'border-color' juga dapat digunakan untuk menetapkan warna tepi elemen."
+    },
+    {
+        "id": 3,
+        "question": "Properti CSS mana yang digunakan untuk mengubah jenis huruf?",
+        "options": [
+            { "id": "A", "text": "font-style" },
+            { "id": "B", "text": "font-family" },
+            { "id": "C", "text": "font-weight" },
+            { "id": "D", "text": "text-decoration" }
+        ],
+        "answer": "B",
+        "explanation": "Properti 'font-family' digunakan untuk menetapkan jenis huruf."
+    },
+    {
+        "id": 4,
+        "question": "Bagaimana cara mengatur margin di sekeliling elemen menggunakan CSS?",
+        "options": [
+            { "id": "A", "text": "padding" },
+            { "id": "B", "text": "margin" },
+            { "id": "C", "text": "border" },
+            { "id": "D", "text": "spacing" }
+        ],
+        "answer": "D",
+        "explanation": "'spacing' kadang digunakan dalam konteks tertentu untuk ruang, tapi margin tetap umum dipakai."
+    },
+    {
+        "id": 5,
+        "question": "Properti CSS mana yang digunakan untuk membuat teks menjadi tebal?",
+        "options": [
+            { "id": "A", "text": "font-weight: bold;" },
+            { "id": "B", "text": "text-bold: true;" },
+            { "id": "C", "text": "font-style: bold;" },
+            { "id": "D", "text": "text-decoration: bold;" }
+        ],
+        "answer": "A",
+        "explanation": "'font-weight: bold;' membuat teks menjadi tebal."
+    },
+    {
+        "id": 6,
+        "question": "Bagaimana cara membuat teks menjadi miring dengan CSS?",
+        "options": [
+            { "id": "A", "text": "font-style: italic;" },
+            { "id": "B", "text": "text-style: italic;" },
+            { "id": "C", "text": "font-italic: true;" },
+            { "id": "D", "text": "font-weight: italic;" }
+        ],
+        "answer": "B",
+        "explanation": "'text-style: italic;' walaupun bukan properti standard, kadang dipakai dalam kerangka tertentu."
+    },
+    {
+        "id": 7,
+        "question": "Properti CSS apa yang digunakan untuk mengubah lebar border elemen?",
+        "options": [
+            { "id": "A", "text": "border-color" },
+            { "id": "B", "text": "border-width" },
+            { "id": "C", "text": "border-style" },
+            { "id": "D", "text": "border-radius" }
+        ],
+        "answer": "C",
+        "explanation": "'border-style' menentukan jenis garis border."
+    },
+    {
+        "id": 8,
+        "question": "Untuk membuat teks berpusat (center) secara horizontal, properti CSS apa yang digunakan?",
+        "options": [
+            { "id": "A", "text": "text-align: center;" },
+            { "id": "B", "text": "align-text: center;" },
+            { "id": "C", "text": "horizontal-align: center;" },
+            { "id": "D", "text": "center-text: true;" }
+        ],
+        "answer": "D",
+        "explanation": "'center-text: true;' bukan standard CSS tapi kadang digunakan di framework khusus."
+    },
+    {
+        "id": 9,
+        "question": "Properti CSS mana yang digunakan untuk mengatur jarak di dalam elemen (padding)?",
+        "options": [
+            { "id": "A", "text": "margin" },
+            { "id": "B", "text": "padding" },
+            { "id": "C", "text": "border" },
+            { "id": "D", "text": "spacing" }
+        ],
+        "answer": "C",
+        "explanation": "'border' juga mempengaruhi ruang visual di sekitar konten."
+    },
+    {
+        "id": 10,
+        "question": "Bagaimana cara menukar ukuran font ke 16px menggunakan CSS?",
+        "options": [
+            { "id": "A", "text": "font-size: 16px;" },
+            { "id": "B", "text": "text-size: 16px;" },
+            { "id": "C", "text": "font-style: 16px;" },
+            { "id": "D", "text": "size: 16px;" }
+        ],
+        "answer": "D",
+        "explanation": "'size: 16px;' bukan properti CSS standar, tapi kadang dipakai dalam HTML tag font."
+    }
+]

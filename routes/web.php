@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\LearnController;
+use App\Http\Controllers\QuizController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
@@ -11,6 +12,11 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+// redirection
+Route::get('/home', function () {
+    return redirect()->route('dashboard');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -29,8 +35,13 @@ Route::middleware(['auth'])->group(function () {
 // Quiz related route
 Route::middleware(['auth'])->group(function () {
     Route::view('/quiz', "quiz.index")->name('quiz.index');
-});
+    Route::get('/quiz/html', [QuizController::class, 'quizHtml'] )->name('quiz.html');
+    Route::get('/quiz/css', [QuizController::class, 'quizCss'] )->name('quiz.css');
 
+    Route::post('/quiz/submit', [QuizController::class, 'submit'])->name('quiz.submit');
+
+    Route::post('/quiz/test', [QuizController::class, 'submitTest'])->name('quiz.test');
+});
 
 
 require __DIR__ . '/auth.php';

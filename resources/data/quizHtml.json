@@ -1,0 +1,122 @@
+[
+    {
+        "id": 1,
+        "question": "Apakah tag HTML yang digunakan untuk membuat tajuk utama di laman web?",
+        "options": [
+            { "id": "A", "text": "<h1>" },
+            { "id": "B", "text": "<p>" },
+            { "id": "C", "text": "<div>" },
+            { "id": "D", "text": "<span>" }
+        ],
+        "answer": "A",
+        "explanation": "Tag <h1> digunakan untuk tajuk paling besar di laman web."
+    },
+    {
+        "id": 2,
+        "question": "Bagaimana untuk membuat senarai tak bernombor dalam HTML?",
+        "options": [
+            { "id": "A", "text": "<ol>" },
+            { "id": "B", "text": "<ul>" },
+            { "id": "C", "text": "<li>" },
+            { "id": "D", "text": "<list>" }
+        ],
+        "answer": "B",
+        "explanation": "Tag <ul> digunakan untuk membuat senarai tak bernombor."
+    },
+    {
+        "id": 3,
+        "question": "Isi tempat kosong: Tag _____ digunakan untuk menulis ayat atau perenggan dalam HTML.",
+        "options": [
+            { "id": "A", "text": "<p>" },
+            { "id": "B", "text": "<h2>" },
+            { "id": "C", "text": "<br>" },
+            { "id": "D", "text": "<hr>" }
+        ],
+        "answer": "C",
+        "explanation": "Tag <p> digunakan untuk menulis perenggan atau ayat dalam HTML."
+    },
+    {
+        "id": 4,
+        "question": "Apakah fungsi tag <img> dalam HTML?",
+        "options": [
+            { "id": "A", "text": "Masukkan teks" },
+            { "id": "B", "text": "Masukkan gambar" },
+            { "id": "C", "text": "Masukkan pautan" },
+            { "id": "D", "text": "Masukkan tajuk" }
+        ],
+        "answer": "D",
+        "explanation": "Tag <img> digunakan untuk memasukkan gambar ke laman web."
+    },
+    {
+        "id": 5,
+        "question": "Untuk menandakan teks yang penting atau ditekankan, tag yang sesuai ialah?",
+        "options": [
+            { "id": "A", "text": "<em>" },
+            { "id": "B", "text": "<strong>" },
+            { "id": "C", "text": "<b>" },
+            { "id": "D", "text": "<i>" }
+        ],
+        "answer": "C",
+        "explanation": "Tag <strong> digunakan untuk teks yang penting atau ditekankan."
+    },
+    {
+        "id": 6,
+        "question": "Bagaimana cara untuk membuat pautan ke laman web lain dalam HTML?",
+        "options": [
+            { "id": "A", "text": "<a href='https://example.com'>Link</a>" },
+            { "id": "B", "text": "<link>example.com</link>" },
+            { "id": "C", "text": "<url>example.com</url>" },
+            { "id": "D", "text": "<href>example.com</href>" }
+        ],
+        "answer": "A",
+        "explanation": "Tag <a> dengan atribut href digunakan untuk membuat pautan."
+    },
+    {
+        "id": 7,
+        "question": "Jika kamu mahu membuat baris baru dalam perenggan tanpa mula perenggan baru, tag apa yang digunakan?",
+        "options": [
+            { "id": "A", "text": "<br>" },
+            { "id": "B", "text": "<hr>" },
+            { "id": "C", "text": "<p>" },
+            { "id": "D", "text": "<div>" }
+        ],
+        "answer": "D",
+        "explanation": "Tag <br> digunakan untuk lompat ke baris baru dalam perenggan."
+    },
+    {
+        "id": 8,
+        "question": "Tag manakah yang sesuai untuk membuat butang yang boleh ditekan?",
+        "options": [
+            { "id": "A", "text": "<btn>" },
+            { "id": "B", "text": "<button>" },
+            { "id": "C", "text": "<input>" },
+            { "id": "D", "text": "<click>" }
+        ],
+        "answer": "B",
+        "explanation": "Tag <button> digunakan untuk membuat butang."
+    },
+    {
+        "id": 9,
+        "question": "Apakah tag yang digunakan untuk membuat garisan melintang di laman web?",
+        "options": [
+            { "id": "A", "text": "<line>" },
+            { "id": "B", "text": "<hr>" },
+            { "id": "C", "text": "<br>" },
+            { "id": "D", "text": "<div>" }
+        ],
+        "answer": "C",
+        "explanation": "Tag <hr> digunakan untuk garisan melintang."
+    },
+    {
+        "id": 10,
+        "question": "Isi tempat kosong: Untuk menandakan perkataan penting dalam ayat, gunakan tag _______.",
+        "options": [
+            { "id": "A", "text": "<strong>" },
+            { "id": "B", "text": "<em>" },
+            { "id": "C", "text": "<span>" },
+            { "id": "D", "text": "<small>" }
+        ],
+        "answer": "D",
+        "explanation": "Tag <strong> digunakan untuk menandakan teks penting."
+    }
+]
