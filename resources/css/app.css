@@ -1,3 +1,43 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+    --pri: #246dff;    /* Slightly deeper blue */
+    --sec: #ffe735;    /* Warmer yellow, less contrast */
+    --ter: #d68a3b;    /* Softer orange */
+    --red: #d65374;    /* Balanced pinkish-red */
+    --green: #66d192;  /* Softer green tone */
+    --purple: #8f69e0; /* Muted purple */
+}
+
+
+.btn-pri {
+    background: var(--pri);
+    color: white;
+    width: fit-content;
+    border: 1px solid white;
+    transition: 300ms ease;
+
+
+    &:hover {
+        background: white;
+        color: var(--pri);
+        border: 1px solid var(--pri);
+    }
+}
+
+.btn-sec {
+    background: var(--sec);
+    color: var(--pri);
+    width: fit-content;
+    border: 1px solid var(--sec);
+    transition: 300ms ease;
+
+
+    &:hover {
+        background: var(--pri);
+        color: var(--sec);
+        border: 1px solid var(--sec);
+    }
+}

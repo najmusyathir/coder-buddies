@@ -50,7 +50,7 @@
     </div>
 
     <!-- Popup Modal -->
-    <div id="popupModal" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center z-50 hidden">
+    <div id="popupModal" class="fixed inset-0 bg-gray-800 bg-opacity-75 items-center justify-center z-50 hidden">
         <div class="bg-white w-full max-w-lg p-5 rounded-lg shadow-lg relative">
             <h3 class="text-2xl font-semibold mb-3">Jawapan Anda</h3>
             <ul id="answerList" class="space-y-2 text-gray-800"></ul>
