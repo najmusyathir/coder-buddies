@@ -1,46 +1,55 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Belajar Secara Interaktif') }}
-        </h2>
-    </x-slot>
+
 
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
 
             <div class="flex flex-col text-center space-y-8 px-12 py-24">
 
-                <div class="flex flex-col items-center justify-center animate-bounce">
-                    <img src="/images/logo-cropped.png" alt="Learn Image" class="w-64">
-                    <h1 class="text-5xl font-bold text-blue-500">Selamat Datang Ke CoderBuddies!</h1>
-                </div>
-
                 <!-- Card Sections -->
-                <div class="flex gap-6 w-full items-center justify-center">
-                    <div class="grid grid-cols-1 max-w-[300px] gap-6">
-                        <a href="{{ route('learn.html') }}"
-                            class="bg-white p-5 rounded-xl shadow-lg transform hover:scale-105 transition cursor-pointer">
-                            <img src="/images/html.jpg" alt="Play Image" class="w-full object-cover">
-                            <div class="py-5">
-                                <h2 class="text-2xl font-bold text-orange-500 mb-2">Mengenal Basis HTML</h2>
-                                <p class="text-gray-600">Mula mengeksplorasi dunia<span class="italic"> Coding</span>
-                                    sekarang!</p>
-                            </div>
-                        </a>
+                <div class="flex flex-col gap-12 w-full items-center justify-center bg-white rounded-xl p-12">
+                    <div class="flex flex-col gap-3">
+                        <h1 class="text-3xl font-bold text-blue-700">
+                            Pilih Topik Pembelajaran Anda!
+                        </h1>
+                        <p class="text-lg max-w-lg">
+                            Mulakan pembelajaran HTML atau CSS untuk cipta laman web yang hebat! Pilih topik di atas dan
+                            mula belajar secara interaktif
+                        </p>
                     </div>
 
-                    <div class="grid grid-cols-1 max-w-[300px] gap-6">
-                        <a href="{{ route('learn.css') }}"
-                            class="bg-white p-5 rounded-xl shadow-lg transform hover:scale-105 transition cursor-pointer">
-                            <img src="/images/css.jpg" alt="Play Image" class="w-full object-cover">
-                            <div class="py-5">
-                                <h2 class="text-2xl font-bold text-blue-500 mb-2">Mengenal Basis CSS</h2>
-                                <p class="text-gray-600">Mula mengeksplorasi dunia<span class="italic"> Coding</span>
-                                    sekarang!</p>
+                    <div class="grid grid-cols-2 max-w-md gap-6 justify-center">
+
+                        <a href="{{ route('learn.html') }}">
+                            <div class="relative group">
+                                <img src="/images/html.jpg" alt="HTML Image"
+                                    class="w-full object-cover rounded-xl shadow-lg">
+                                <div
+                                    class="absolute inset-0 bg-white flex flex-col items-center justify-center p-5 rounded-xl shadow-lg transform scale-95 opacity-0 group-hover:opacity-100 group-hover:scale-100 transition duration-300 cursor-pointer">
+                                    <h2 class="text-2xl font-extrabold text-orange-500 mb-2">Mengenal Basis HTML</h2>
+                                    <p class="text-gray-600">Mula mengeksplorasi dunia <span
+                                            class="italic">Coding</span>
+                                        sekarang!</p>
+                                </div>
+                            </div>
+                        </a>
+
+                        <a href="{{ route('learn.css') }}">
+                            <div class="relative group">
+                                <img src="/images/css.jpg" alt="CSS Image"
+                                    class="w-full object-fit rounded-xl shadow-lg">
+                                <div
+                                    class="absolute inset-0 bg-white flex flex-col items-center justify-center p-5 rounded-xl shadow-lg transform scale-95 opacity-0 group-hover:opacity-100 group-hover:scale-100 transition duration-300 cursor-pointer">
+                                    <h2 class="text-2xl font-extrabold text-blue-500 mb-2">Mengenal Basis CSS</h2>
+                                    <p class="text-gray-600">Mula mengeksplorasi dunia <span
+                                            class="italic">Coding</span>
+                                        sekarang!</p>
+                                </div>
                             </div>
                         </a>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
