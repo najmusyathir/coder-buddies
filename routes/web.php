@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RankController;
 use App\Http\Controllers\LearnController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\ProfileController;
@@ -41,6 +42,11 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/quiz/submit', [QuizController::class, 'submit'])->name('quiz.submit');
 
     Route::post('/quiz/test', [QuizController::class, 'submitTest'])->name('quiz.test');
+});
+
+// Rank related route
+Route::middleware(['auth'])->group(function () {
+    Route::get('/ranking', [RankController::class, 'index'])->name('rank.index');
 });
 
 

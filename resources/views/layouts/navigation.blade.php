@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-gray-900 bg-opacity-10 border border-pink-300">
     <!-- Primary Navigation Menu -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between h-16">
@@ -20,6 +20,9 @@
                     </x-nav-link>
                     <x-nav-link :href="route('quiz.index')" :active="request()->routeIs('quiz.index')">
                         {{ __('Quiz') }}
+                    </x-nav-link>
+                    <x-nav-link :href="route('rank.index')" :active="request()->routeIs('rank.index')">
+                        {{ __('Carta') }}
                     </x-nav-link>
                 </div>
             </div>
