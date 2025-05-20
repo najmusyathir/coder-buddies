@@ -16,10 +16,11 @@
             </div>
 
             <div class="flex flex-col items-center bg-white">
-                <p class="max-w-[60ch] text-xl text-orange-600 font-semibold py-3">
-                    Sekarang, mari kita mulakan latihan praktikal! Pilih latihan di bawah untuk mula belajar secara
-                    interaktif.
-                </p>
+                <h4 class="max-w-[60ch] text-lg text-orange-600 font-semibold">
+                    Mulakan latihan praktikal!
+                </h4>
+                <p class="pb-10">Pilih latihan di bawah untuk mula belajar secara
+                    interaktif:</p>
                 <div x-data="{
                     cards: {{ Js::from($learn) }},
                     index: 0,
@@ -63,15 +64,15 @@
                     runCode() {
                         const iframe = this.$refs.outputFrame;
                         const content = `
-                                                                                                                            <html>
-                                                                                                                                <head>
-                                                                                                                                    <style>${this.cssCode ?? ''}</style>
-                                                                                                                                </head>
-                                                                                                                                <body>
-                                                                                                                                    ${this.htmlCode ?? ''}
-                                                                                                                                </body>
-                                                                                                                            </html>
-                                                                                                                        `;
+                                                                                                                                            <html>
+                                                                                                                                                <head>
+                                                                                                                                                    <style>${this.cssCode ?? ''}</style>
+                                                                                                                                                </head>
+                                                                                                                                                <body>
+                                                                                                                                                    ${this.htmlCode ?? ''}
+                                                                                                                                                </body>
+                                                                                                                                            </html>
+                                                                                                                                        `;
                         const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
                         iframeDocument.open();
                         iframeDocument.write(content);
@@ -227,7 +228,7 @@
             </div>
 
             <div class="flex w-full justify-center">
-                <a href="{{route('learn.index')}}" class="btn-pri px-8 py-3 rounded-lg">Kembali</a>
+                <a href="{{ route('learn.index') }}" class="btn-pri px-8 py-3 rounded-lg">Kembali</a>
             </div>
 
         </div>

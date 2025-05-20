@@ -1,9 +1,4 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-2xl text-gray-800 leading-tight text-center">
-            {{ __('Carta Markah') }}
-        </h2>
-    </x-slot>
 
     @php
         $sortedResult = $results->sortBy('duration')->sortByDesc('score')->values();
@@ -41,93 +36,107 @@
         }
     </style>
 
-    <div class="py-12 bg-gradient-to-b from-blue-50 to-yellow-50 flex flex-col items-center">
+    <div class="py-12 flex flex-col gap-16 items-center">
 
-        @if (!$myTopHTMLResult?->score)
-            <p class="text-3xl font-extrabold text-indigo-600">Markah: Rekod Anda Tidak dijumpai</p>
-        @endif
+        <h2 class="bg-white bg-opacity-70 text-orange-600 font-bold text-4xl w-full py-12 text-center">
+            Carta Markah
+        </h2>
 
-        <div class="px-6 flex justify-center w-full">
+        <div class="p-6 flex flex-col justify-center bg-white rounded-2xl w-full max-w-[1140px]">
 
             {{-- own Record --}}
-            @if ($myTopHTMLResult?->score)
-                <div class="flex flex-col items-center space-y-8 py-12 px-8 w-1/2">
 
-                    {{-- Best Record --}}
-                    <div class="grid grid-cols-2 gap-6">
-                        <div
-                            class="flex flex-col gap-4 p-6 border border-indigo-300 rounded-xl bg-gradient-to-r from-indigo-100 to-indigo-200 shadow-lg">
-                            <h1 class="text-2xl font-extrabold text-indigo-700 drop-shadow-md select-none">
-                                🏆 Markah Tertinggi - HTML
-                            </h1>
-                            <div class="p-4 bg-white rounded-lg shadow-md">
-                                <p class="text-3xl font-extrabold text-indigo-600">Score:
-                                    {{ $myTopHTMLResult?->score * 10 || 0}}
-                                    / 10</p>
-                                <p class="text-lg text-indigo-500">⏱️
-                                    {{ number_format($myTopHTMLResult?->duration / 1000, 2) || 0}}s</p>
-                                <p class="text-sm text-indigo-400">
-                                    {{ date('d M Y, H:i', strtotime($myTopHTMLResult?->created_at)) || 0 }}</p>
-                            </div>
-                        </div>
+            <div class="flex flex-col items-center space-y-8 py-6 px-8 ">
+                {{-- Best Record --}}
+                <h2 class="text-2xl font-bold text-blue-600">
+                    🏆 Rekod Peribadi 🏆
+                </h2>
 
-                        {{-- CSS Highlight --}}
-                        <div
-                            class="flex flex-col gap-4 p-6 border border-green-300 rounded-xl bg-gradient-to-r from-green-100 to-green-200 shadow-lg">
-                            <h1 class="text-2xl font-extrabold text-green-700 drop-shadow-md select-none">
-                                🏆 Markah Tertinggi - CSS
-                            </h1>
-                            <div class="p-4 bg-white rounded-lg shadow-md">
-                                <p class="text-3xl font-extrabold text-green-600">Score:
-                                    {{ $myTopCSSResult?->score * 10  || 0}} /
-                                    10</p>
-                                <p class="text-lg text-green-500">⏱️
-                                    {{ number_format($myTopCSSResult?->duration / 1000, 2) || 0 }}s</p>
-                                <p class="text-sm text-green-400">
-                                    {{ date('d M Y, H:i', strtotime($myTopCSSResult?->created_at)) || 0}}</p>
-                            </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="flex gap-4 p-6 bg-slate-50 border rounded-xl shadow-lg">
+                        <h1 class="text-2xl font-bold text-orange-600 drop-shadow-md select-none">
+                            HTML
+                        </h1>
+                        <div class="p-4 flex flex-col flex-1 rounded-lg shadow-md">
+                            @if ($myTopHTMLResult)
+                                <div class="flex gap-6">
+                                    <p class="text-3xl font-bold text-orange-600">Score:
+                                        {{ $myTopHTMLResult->score * 10 }}
+                                        / 10</p>
+                                    <p class="text-lg text-orange-600">⏱️
+                                        {{ number_format($myTopHTMLResult->duration / 1000, 2) }}s</p>
+                                </div>
+
+                                <p class="text-md text-end text-orange-600">
+                                    {{ date('d M Y, H:i', strtotime($myTopHTMLResult->created_at)) }}</p>
+                            @else
+                                <p class="text-lg bg-white">Tiada Rekod.</p>
+                            @endif
                         </div>
                     </div>
 
-                    {{-- HTML Old Record --}}
-                    <div
-                        class="flex flex-col gap-4 p-6 border border-blue-300 rounded-xl bg-gradient-to-r from-blue-100 to-blue-200 shadow-lg w-full">
-                        <h1 class="text-3xl font-extrabold text-blue-500 drop-shadow-md select-none">
+                    {{-- CSS Highlight --}}
+                    <div class="flex gap-4 p-6 bg-slate-50 border rounded-xl shadow-lg">
+                        <h1 class="text-xl font-bold text-blue-600 drop-shadow-md select-none">
+                            CSS
+                        </h1>
+                        <div class="p-4 flex flex-col flex-1 rounded-lg shadow-md">
+                            @if ($myTopCSSResult)
+                                <div class="flex gap-6">
+                                    <p class="text-3xl font-bold text-blue-600">Score:
+                                        {{ $myTopCSSResult->score * 10 }} /
+                                        10</p>
+                                    <p class="text-lg text-blue-600">⏱️
+                                        {{ number_format($myTopCSSResult->duration / 1000, 2) }}s</p>
+                                </div>
+                                <p class="text-sm text-blue-600 text-end">
+                                    {{ date('d M Y, H:i', strtotime($myTopCSSResult?->created_at)) }}</p>
+                            @else
+                                <p class="text-xl">Tiada Rekod.</p>
+                            @endif
+                        </div>
+                    </div>
+                </div>
+
+                {{-- HTML Old Record --}}
+                {{-- <div
+                        class="flex flex-col gap-4 p-6 border bg-slate-200 rounded-xl shadow-lg w-full">
+                        <h1 class="text-3xl font-bold text-orange-600 drop-shadow-md select-none">
                             📜 Rekod Markah HTML Tertinggi
                         </h1>
 
                         <div class="flex flex-col gap-3 max-h-[200px] scrollbar-thin overflow-auto">
                             @foreach ($myHTMLResults as $result)
                                 <div
-                                    class="flex items-center justify-between bg-white p-3 rounded-lg shadow-md hover:bg-blue-100 transition">
-                                    <div class="text-xl font-bold text-blue-600 pr-5">{{ $loop->iteration }}</div>
+                                    class="flex items-center justify-between bg-white p-3 rounded-lg shadow-md hover:bg-orange-100 transition">
+                                    <div class="text-xl font-bold text-orange-600 pr-5">{{ $loop->iteration }}</div>
                                     <div class="flex-1 flex gap-8 items-center">
-                                        <p class="text-2xl font-bold text-blue-600">{{ $result->score * 10 }} / 10</p>
-                                        <p class="text-md text-blue-500">⏱️
+                                        <p class="text-2xl font-bold text-orange-600">{{ $result->score * 10 }} / 10</p>
+                                        <p class="text-md text-orange-600">⏱️
                                             {{ number_format($result->duration / 1000, 2) }}s
                                         </p>
-                                        <p class="text-sm text-blue-400">
+                                        <p class="text-sm text-orange-600">
                                             {{ date('d M Y, H:i', strtotime($result->created_at)) }}</p>
                                     </div>
                                 </div>
                             @endforeach
                         </div>
 
-                    </div>
+                    </div> --}}
 
-                    {{-- CSS Old Record --}}
-                    <div
-                        class="flex flex-col gap-4 p-6 border border-green-300 rounded-xl bg-gradient-to-r from-green-100 to-green-200 shadow-lg w-full">
-                        <h1 class="text-3xl font-extrabold text-green-500 drop-shadow-md select-none">
+                {{-- CSS Old Record --}}
+                {{-- <div
+                        class="flex flex-col gap-4 p-6 border border-blue-300 rounded-xl shadow-lg w-full">
+                        <h1 class="text-3xl font-bold text-blue-600 drop-shadow-md select-none">
                             📜 Rekod Markah CSS Tertinggi
                         </h1>
                         <div class="flex flex-col gap-3 max-h-[200px] scrollbar-thin overflow-auto">
                             @foreach ($myCSSResults as $result)
                                 <div
-                                    class="flex items-center justify-between bg-white p-3 rounded-lg shadow-md hover:bg-green-100 transition">
-                                    <div class="text-xl font-bold text-green-600 pr-5">{{ $loop->iteration }}</div>
+                                    class="flex items-center justify-between bg-white p-3 rounded-lg shadow-md hover:bg-blue-100 transition">
+                                    <div class="text-xl font-bold text-blue-600 pr-5">{{ $loop->iteration }}</div>
                                     <div class="flex-1 flex gap-8 items-center">
-                                        <p class="text-2xl font-bold text-green-600">{{ $result->score * 10 }} / 10</p>
+                                        <p class="text-2xl font-bold text-blue-600">{{ $result->score * 10 }} / 10</p>
                                         <p class="text-md text-green-500">⏱️
                                             {{ number_format($result->duration / 1000, 2) }}s
                                         </p>
@@ -137,83 +146,84 @@
                                 </div>
                             @endforeach
                         </div>
-                    </div>
-                </div>
-            @endif
-
+                    </div> --}}
+            </div>
 
             {{-- global record --}}
-            <div class="flex flex-col w-1/2 gap-5 p-6 rounded-2xl shadow-2xl">
+            <div class="flex flex-col bg-slate-50 rounded-xl shadow-xl p-16">
+                <h2 class="text-2xl font-bold text-blue-600 text-center">
+                    🏆 Rekod Keseluruhan 🏆
+                </h2>
+                <div class="flex gap-5">
 
-                <div
-                    class="flex flex-col p-8 gap-8 bg-gradient-to-r from-blue-300 via-green-300 to-yellow-300 rounded-xl ">
+                    <div class="flex flex-1 flex-col gap-8 bg-gradient-to-r rounded-xl ">
 
-                    <h1 class="text-2xl font-extrabold text-indigo-700 drop-shadow-md select-none">
-                        🏆 Rekod Keseluruhan - HTML
-                    </h1>
-                    <div class=" flex flex-col gap-3 max-h-[500px] scrollbar-thin overflow-auto">
-                        @foreach ($topOverallHTML as $result)
-                            <div
-                                class="flex justify-between items-center bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition-shadow duration-300 cursor-pointer select-none">
-                                <div class="flex items-center gap-4">
-                                    <div class="text-3xl font-extrabold text-indigo-700 w-10 text-center select-text">
-                                        {{ $loop->iteration }}
+                        <h1 class="text-2xl font-bold text-indigo-700 drop-shadow-md text-center">
+                            HTML
+                        </h1>
+                        <div class=" flex flex-col gap-3 max-h-[500px] scrollbar-thin overflow-auto">
+                            @foreach ($topOverallHTML as $result)
+                                <div
+                                    class="flex justify-between items-center bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition-shadow duration-300 cursor-pointer select-none">
+                                    <div class="flex items-center gap-4">
+                                        <div class="text-3xl font-bold text-indigo-700 w-10 text-center select-text">
+                                            {{ $loop->iteration }}
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-indigo-800 tracking-wide">
+                                                {{ $result->user->name ?? 'Unknown' }}
+                                            </h3>
+                                            <p class="text-sm text-indigo-600 italic tracking-tight">
+                                                {{ date('d M Y, H:i', strtotime($result->created_at)) }}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 class="text-xl font-extrabold text-indigo-800 tracking-wide">
-                                            {{ $result->user->name ?? 'Unknown' }}
-                                        </h3>
-                                        <p class="text-sm text-indigo-600 italic tracking-tight">
-                                            {{ date('d M Y, H:i', strtotime($result->created_at)) }}
+                                    <div class="text-right min-w-[120px]">
+                                        <p class="text-2xl font-bold text-green-700 tracking-wide">
+                                            {{ number_format($result->score * 100, 1) }}%
+                                        </p>
+                                        <p class="text-sm text-green-800 tracking-tight">
+                                            Masa: {{ number_format($result->duration / 1000, 2) }} saat
                                         </p>
                                     </div>
                                 </div>
-                                <div class="text-right min-w-[120px]">
-                                    <p class="text-2xl font-bold text-green-700 tracking-wide">
-                                        {{ number_format($result->score * 100, 1) }}%
-                                    </p>
-                                    <p class="text-sm text-green-800 tracking-tight">
-                                        Masa: {{ number_format($result->duration / 1000, 2) }} saat
-                                    </p>
-                                </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
-                </div>
 
-                <div
-                    class="flex flex-col p-8 gap-8 bg-gradient-to-r from-blue-300 via-green-300 to-yellow-300 rounded-xl ">
+                    <div class="flex flex-1 flex-col gap-8 bg-gradient-to-r rounded-xl ">
 
-                    <h1 class="text-2xl font-extrabold text-indigo-700 drop-shadow-md select-none">
-                        🏆 Rekod Keseluruhan - CSS
-                    </h1>
-                    <div class=" flex flex-col gap-3 max-h-[500px] scrollbar-thin overflow-auto">
-                        @foreach ($topOverallCSS as $result)
-                            <div
-                                class="flex justify-between items-center bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition-shadow duration-300 cursor-pointer select-none">
-                                <div class="flex items-center gap-4">
-                                    <div class="text-3xl font-extrabold text-indigo-700 w-10 text-center select-text">
-                                        {{ $loop->iteration }}
+                        <h1 class="text-2xl font-bold text-indigo-700 drop-shadow-md text-center">
+                            CSS
+                        </h1>
+                        <div class=" flex flex-col gap-3 max-h-[500px] scrollbar-thin overflow-auto">
+                            @foreach ($topOverallCSS as $result)
+                                <div
+                                    class="flex justify-between items-center bg-white rounded-xl shadow-md p-5 hover:shadow-xl transition-shadow duration-300 cursor-pointer select-none">
+                                    <div class="flex items-center gap-4">
+                                        <div class="text-3xl font-bold text-indigo-700 w-10 text-center select-text">
+                                            {{ $loop->iteration }}
+                                        </div>
+                                        <div>
+                                            <h3 class="text-xl font-bold text-indigo-800 tracking-wide">
+                                                {{ $result->user->name ?? 'Unknown' }}
+                                            </h3>
+                                            <p class="text-sm text-indigo-600 italic tracking-tight">
+                                                {{ date('d M Y, H:i', strtotime($result->created_at)) }}
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <h3 class="text-xl font-extrabold text-indigo-800 tracking-wide">
-                                            {{ $result->user->name ?? 'Unknown' }}
-                                        </h3>
-                                        <p class="text-sm text-indigo-600 italic tracking-tight">
-                                            {{ date('d M Y, H:i', strtotime($result->created_at)) }}
+                                    <div class="text-right min-w-[120px]">
+                                        <p class="text-2xl font-bold text-green-700 tracking-wide">
+                                            {{ number_format($result->score * 100, 1) }}%
+                                        </p>
+                                        <p class="text-sm text-green-800 tracking-tight">
+                                            Masa: {{ number_format($result->duration / 1000, 2) }} saat
                                         </p>
                                     </div>
                                 </div>
-                                <div class="text-right min-w-[120px]">
-                                    <p class="text-2xl font-bold text-green-700 tracking-wide">
-                                        {{ number_format($result->score * 100, 1) }}%
-                                    </p>
-                                    <p class="text-sm text-green-800 tracking-tight">
-                                        Masa: {{ number_format($result->duration / 1000, 2) }} saat
-                                    </p>
-                                </div>
-                            </div>
-                        @endforeach
+                            @endforeach
+                        </div>
                     </div>
                 </div>
             </div>
