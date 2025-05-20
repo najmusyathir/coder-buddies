@@ -20,17 +20,16 @@ class QuizController extends Controller
         return view("quiz.css", compact("quiz"));
     }
 
-    public function submitTest()
+    public function result($result_id)
     {
-        $result = new Result();
-        $result->answers = "test data";
-        $result->score = 10.1;
-        $result->duration = 10020;
-        $result->user_id = 01;
-        $result->save();
+        $result = Result::findOrFail($result_id);
+        $quiz = json_decode(file_get_contents(
+            resource_path($result->type === "html" ? 'data/quizHtml.json' : 'data/quizCss.json')
+        ), true);
 
-        return redirect()->route('quiz.index');
+        return view("quiz.result", compact("quiz", "result"));
     }
+
 
     public function submit(Request $request)
     {
@@ -66,7 +65,7 @@ class QuizController extends Controller
         $result->user_id = Auth::id() ?? 0;
         $result->save();
 
-        return redirect()->route('quiz.index')->with('success', "Quiz submitted! Your score: " . ($score * 100) . "%");
+        return redirect()->route('quiz.result', ['id' => $result->id])->with('success', "Quiz submitted! Your score: " . ($score * 100) . "%");
     }
 
 

@@ -40,8 +40,8 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/quiz/css', [QuizController::class, 'quizCss'] )->name('quiz.css');
 
     Route::post('/quiz/submit', [QuizController::class, 'submit'])->name('quiz.submit');
+    Route::get('/quiz/result/{id}', [QuizController::class, 'result'] )->name('quiz.result');
 
-    Route::post('/quiz/test', [QuizController::class, 'submitTest'])->name('quiz.test');
 });
 
 // Rank related route

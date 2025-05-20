@@ -2,7 +2,7 @@
     <div class="pt-12 flex flex-col gap-8 justify-center">
 
         <div class="flex justify-center">
-            <div class="flex flex-col text-center space-y-8 px-12 py-24 bg-white max-w-[1140px] ">
+            <div class="flex flex-col text-center space-y-8 px-12 py-24 bg-white max-w-6xl ">
                 <div class="flex min-h-[500px] items-center justify-center">
                     <div class=" w-1/2 p-12 flex flex-col gap-6 text-left">
                         <h1 class="animate-fadeIn duration-300 text-5xl font-bold text-blue-500">Selamat Datang,
@@ -22,7 +22,7 @@
         </div>
 
         <div class="flex flex-col items-center text-center space-y-8 p-12 px-0 rounded-xl bg-white">
-            <div class="flex flex-col max-w-[1140px]">
+            <div class="flex flex-col max-w-6xl">
                 <h1 class="text-5xl font-bold text-blue-500">Mula Terokai Pembelajaran!</h1>
                 <div class="flex min-h-[500px] items-center justify-center">
                     <img src="/images/quiz.jpg" alt="Learn Image" class="w-1/2 object-cover">

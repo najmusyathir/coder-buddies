@@ -1,12 +1,10 @@
 <x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Sesi 1: Mengenal Basis HTML') }}
-        </h2>
-    </x-slot>
-
     <div class="py-12">
-        <div class="max-w-4xl mx-auto bg-white p-10 rounded-lg shadow-lg">
+        <div class="max-w-4xl mx-auto bg-gray-100 p-10 rounded-lg shadow-lg">
+            <h1 class="text-blue-600 font-bold text-3xl text-center pb-6">
+                Kuiz CSS
+            </h1>
+
             <form id="quizForm" method="POST" action="{{ route('quiz.submit') }}">
                 @csrf
 
@@ -19,7 +17,7 @@
 
                 @foreach ($quizData as $index => $card)
                     <div class="p-5 bg-gray-100 rounded-lg shadow-md mb-5">
-                        <h3 class="text-xl font-semibold mb-1 text-blue-800">
+                        <h3 class="text-xl font-semibold mb-1 text-blue-600">
                             {{ $index + 1 }}. {{ $card['question'] }}
                         </h3>
 
@@ -29,7 +27,7 @@
                                     <label class="inline-flex items-center space-x-2">
                                         <input type="radio" name="question_{{ $card['id'] }}"
                                             value="{{ $option['id'] }}" data-label="{{ $optionLabels[$optIndex] }}"
-                                            data-text="{{ $option['text'] }}"  required>
+                                            data-text="{{ $option['text'] }}" required>
                                         <span>{{ $optionLabels[$optIndex] }}. {{ $option['text'] }}</span>
                                     </label>
                                 </div>
@@ -50,13 +48,12 @@
     </div>
 
     <!-- Popup Modal -->
-    <div id="popupModal" class="fixed inset-0 bg-gray-800 bg-opacity-75 items-center justify-center z-50 hidden">
-        <div class="bg-white w-full max-w-lg p-5 rounded-lg shadow-lg relative">
+    <div id="popupModal" class="fixed flex inset-0 bg-gray-800 bg-opacity-75 items-center justify-center z-50 hidden">
+        <div class="bg-white w-full max-w-lg p-5 rounded-lg shadow-lg flex flex-col gap-3 relative">
             <h3 class="text-2xl font-semibold mb-3">Jawapan Anda</h3>
             <ul id="answerList" class="space-y-2 text-gray-800"></ul>
-            <button onclick="closePopup()"
-                class="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-lg hover:bg-red-600">
-                X
+            <button onclick="closePopup()" class="bg-green-600 text-white font-semibold px-3 py-1 rounded-lg">
+                Periksa Jawapan
             </button>
         </div>
     </div>

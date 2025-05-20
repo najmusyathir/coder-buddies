@@ -2,7 +2,7 @@
 
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-7xl items-center min-h-[75vh] mx-auto sm:px-6 lg:px-8">
 
             <div class="flex flex-col text-center space-y-8 px-12 py-24">
 
