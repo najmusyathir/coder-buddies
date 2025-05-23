@@ -64,15 +64,15 @@
                     runCode() {
                         const iframe = this.$refs.outputFrame;
                         const content = `
-                                                                                                                                            <html>
-                                                                                                                                                <head>
-                                                                                                                                                    <style>${this.cssCode ?? ''}</style>
-                                                                                                                                                </head>
-                                                                                                                                                <body>
-                                                                                                                                                    ${this.htmlCode ?? ''}
-                                                                                                                                                </body>
-                                                                                                                                            </html>
-                                                                                                                                        `;
+                                                                                                                                                            <html>
+                                                                                                                                                                <head>
+                                                                                                                                                                    <style>${this.cssCode ?? ''}</style>
+                                                                                                                                                                </head>
+                                                                                                                                                                <body>
+                                                                                                                                                                    ${this.htmlCode ?? ''}
+                                                                                                                                                                </body>
+                                                                                                                                                            </html>
+                                                                                                                                                        `;
                         const iframeDocument = iframe.contentDocument || iframe.contentWindow.document;
                         iframeDocument.open();
                         iframeDocument.write(content);
@@ -211,9 +211,16 @@
 
                             </div>
 
+
                             <div class="grid grid-cols-2 gap-4">
-                                <textarea x-model="htmlCode" rows="5" class="p-2 border rounded-md" placeholder="HTML"></textarea>
-                                <textarea x-model="cssCode" rows="5" class="p-2 border rounded-md" placeholder="CSS"></textarea>
+                                <div class="flex flex-col">
+                                    <label for="htmlCode" class="text-xl text-orange-500 font-semibold">HTML</label>
+                                    <textarea x-model="htmlCode" rows="5" class="p-2 border rounded-md" placeholder="HTML"></textarea>
+                                </div>
+                                <div class="flex flex-col">
+                                    <label for="cssCode" class="text-xl  font-semibold text-blue-500">CSS</label>
+                                    <textarea x-model="cssCode" rows="5" class="p-2 border rounded-md" placeholder="CSS"></textarea>
+                                </div>
                             </div>
 
                             <button @click="runCode()"
