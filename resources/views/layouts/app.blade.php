@@ -18,7 +18,7 @@
 
 <body class="font-sans antialiased">
     <div class="fixed -z-10">
-        <img src="/images/bg3.jpg" class="w-full object-cover">
+        <img src="/images/bg-main.png" class="object-cover w-screen h-screen">
     </div>
 
     <div class="min-h-scree">

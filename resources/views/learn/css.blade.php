@@ -88,7 +88,7 @@
                     <div class="grid grid-cols-3 gap-5">
                         <template x-for="(card, idx) in cards" :key="idx">
                             <div @click="selectCard(idx)"
-                                class="p-5 bg-gray-100 rounded-lg shadow-md duration-300 hover:bg-gray-200 cursor-pointer">
+                                class="p-5 bg-gray-100 rounded-lg shadow-md duration-300 hover:bg-gray-200 cursor-pointer hover:scale-110">
                                 <h3 class="text-xl font-semibold mb-1 text-blue-600"
                                     x-text="`${idx + 1}. ${cards[idx].title}`"></h3>
                                 <p class="text-gray-600" x-text="card.description"></p>
