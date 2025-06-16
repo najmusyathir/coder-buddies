@@ -10,7 +10,7 @@
 
                 @php
                     // Load the JSON data
-                    $jsonFile = resource_path('data/quizHtml.json');
+                    $jsonFile = resource_path('data/quizCss.json');
                     $quizData = json_decode(file_get_contents($jsonFile), true);
                     $optionLabels = range('A', 'Z');
                 @endphp
