@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome | KidZone</title>
+    <title>Welcome | BuddiesCoder</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,26 +24,26 @@
 
 <body class="flex flex-col items-center justify-center min-h-screen w-full bg-white">
 
-    <div class="flex flex-col w-full items-center text-center gap-24 space-y-8 px-8 pt-36"
+    <div class="flex flex-col w-full items-center text-center gap-24 space-y-8 px-8 pt-12"
         style="background: url('images/bg1.png'); background-size: cover;">
         <div>
-            <div class="py-5 bg-[#fff] w-screen">
-                <h1 class="text-5xl w-full text-center  font-bold text-blue-500 mb-2">Belajar HTML & CSS dengan Seronok!
+            <div class="py-4 bg-[#fff] w-screen flex flex-col gap-1">
+                <h1 class="text-4xl w-full text-center font-bold text-blue-500">Belajar HTML & CSS dengan Seronok!
                 </h1>
-                <h2 class="text-2xl font-bold text-blue-500 mb-2">
+                <h2 class="text-xl font-bold text-blue-500">
                     Mari cipta laman web sendiri dari asas hingga hebat!
                 </h2>
-                <p class="text-gray-600 text-lg">Pembelajaran interaktif yang menginspirasi dan menyeronokkan.</p>
+                <p class="text-gray-600 text-md">Pembelajaran interaktif yang menginspirasi dan menyeronokkan.</p>
             </div>
 
             <!-- Card Sections -->
-            <div class="flex flex-col w-full items-center justify-center gap-8 py-10">
+            <div class="flex flex-col w-full items-center justify-center gap-8 py-6">
                 <a href="{{ route('dashboard') }}"
-                    class="p-5 rounded-full overflow-hidden shadow-lg transform hover:scale-105 w-[400px] transition cursor-pointer flex items-center justify-center">
+                    class="p-3 rounded-full overflow-hidden shadow-lg transform hover:scale-105 w-[250px] transition cursor-pointer flex items-center justify-center">
                     <img src="/images/landing.png" alt="Learn Image" class="rounded-full">
                 </a>
                 <a href="{{ route('dashboard') }}" class="bg-white rounded-lg hover:scale-105 duration-300">
-                    <h3 class="text-2xl px-6 py-3 m-1 rounded-lg bg-white border-4 border-orange-500 text-blue-500">
+                    <h3 class="text-lg px-6 py-1 m-1 rounded-lg bg-white border-2 border-orange-500 text-blue-500">
                         Klik untuk mula <strong>sekarang</strong>
                     </h3>
                 </a>
@@ -60,7 +60,7 @@
     <div class="flex flex-col w-full bg-white">
         <div class="flex text-center items-center justify-center fade-in y-40 px-6 w-full">
             <div class="flex flex-col gap-8">
-                <h2 id="animatedText" class="text-5xl font-thin text-orange-400"></h2>
+                <h2 id="animatedText" class="text-4xl font-thin text-orange-400"></h2>
                 <script>
                     const texts = [
                         "Belajar Secara Interaktif",
@@ -96,17 +96,17 @@
                     typeEffect();
                 </script>
 
-                <p class="max-w-[60ch] text-xl " style="letter-spacing: 3px">
-                    Website ini direka khas untuk kanak-kanak mempelajari asas HTML dan CSS dengan cara yang
+                <p class="max-w-[60ch] text-lg " style="letter-spacing: 1px">
+                    Laman web ini direka khas untuk kanak-kanak mempelajari asas HTML dan CSS dengan cara yang
                     menyeronokkan
                     dan interaktif. Pelajar boleh membaca penerangan ringkas, mencuba kod secara langsung, dan
                     menguji
-                    kefahaman mereka melalui kuiz. Dengan pendekatan belajar sambil bermain, website ini membantu
+                    kefahaman mereka melalui kuiz. Dengan pendekatan belajar sambil bermain, laman web ini membantu
                     membina
-                    asas pengaturcaraan sejak usia muda.
+                    asas pengekodan sejak usia muda.
                 </p>
             </div>
-            <img class="p-32 pt-0 rounded-full max-w-[600px]" src="{{ asset('/images/logo.png') }}" alt="">
+            <img class="p-16 pl-0 pt-0 -rotate-[5deg] rounded-full max-w-[600px]" src="{{ asset('/images/logo-cropped.png') }}" alt="">
         </div>
     </div>
 
@@ -116,57 +116,50 @@
             <img src="{{ asset('/images/wave.svg') }}" class="w-full h-40 object-cover rotate-180" alt="">
         </div>
         <div class="w-full py-16">
-            <div class="flex flex-col w-full items-center justify-center px-8 pb-16 fade-in">
-                <div class="max-w-7xl w-full flex flex-col items-center text-center bg-white p-12 rounded-2xl">
+            <div class="flex flex-col w-full items-center justify-center px-8 pb-12 fade-in">
+                <div class="max-w-5xl w-full flex flex-col items-center text-center bg-white p-6 rounded-2xl">
                     <div class="flex flex-col gap-3 p-6 mb-6">
-                        <h2 class="text-5xl font-thin text-center text-blue-500">Kanak-kanak Akan Seronok Belajar Koding</h2>
-                        <h4 class="text-3xl text-center">Dengan Cara Menarik dan Mudah Difahami</h4>
+                        <h2 class="text-4xl font-thin text-center text-blue-500">Kanak-kanak Akan Seronok Belajar Koding</h2>
+                        <h4 class="text-xl text-center">Dengan Cara Menarik dan Mudah Difahami</h4>
                     </div>
 
                     <div class="w-full  grid grid-cols-1 lg:grid-cols-3 gap-8 px-12 text-center">
                         <div class="flex flex-col items-center gap-5 rounded-xl p-6">
                             <img src="/images/1.png" class="w-72 aspect-square rounded-full">
-                            <h5 class="text-2xl text-blue-500">
+                            <h5 class="text-xl text-blue-500">
                                 Modul Lengkap Untuk Digunakan
                             </h5>
-                            <p class="text-xl ">
+                            <p class="text-lg ">
                                 Dengan bahan pengajaran yang lengkap dan panduan mesra pengguna, sesiapa sahaja boleh
-                                mengajar
-                                asas
-                                pengaturcaraan dengan mudah dan yakin.
+                                mengajar asas pengaturcaraan dengan mudah dan yakin.
                             </p>
                         </div>
 
                         <div class="flex flex-col items-center gap-5 rounded-xl p-6">
                             <img src="/images/2.png" class="w-72 aspect-square rounded-full">
 
-                            <h5 class="text-2xl text-blue-500">
+                            <h5 class="text-xl text-blue-500">
                                 Bahasa Kod Yang Diguna Profesional
                             </h5>
-                            <p class="text-xl">
+                            <p class="text-lg">
                                 Pelajar akan menggunakan bahasa koding sebenar berasaskan teks, membina kemahiran
-                                sebenar
-                                seperti
-                                pembangun perisian profesional.
+                                sebenar seperti pembangun perisian profesional.
                             </p>
                         </div>
 
                         <div class="flex flex-col items-center gap-5 rounded-xl p-6">
                             <img src="/images/3.png" class="w-72 aspect-square rounded-full">
 
-                            <h5 class="text-2xl text-blue-500">
+                            <h5 class="text-xl text-blue-500">
                                 Menyeronokkan, Interaktif dan Efektif
                             </h5>
-                            <p class="text-xl">
+                            <p class="text-lg">
                                 Kanak-kanak belajar secara aktif melalui permainan yang memberi ganjaran dan
-                                meningkatkan
-                                motivasi mereka
-                                dalam memahami koding.
+                                meningkatka motivasi mereka dalam memahami koding.
                             </p>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="w-full">
@@ -177,31 +170,31 @@
 
 
     <div class="bg-white w-full">
-        <div class="flex flex-col w-full items-center justify-center bg-white px-8 py-16 pb-48 fade-in">
-            <div class="max-w-5xl w-full flex flex-col gap-8 text-center">
-                <h2 class="text-5xl font-thin text-blue-600">Statistik Buddies Coder</h2>
-                <h4 class="text-3xl text-center">Platform kami menjadi kegemaran ramai</h4>
+        <div class="flex flex-col w-full items-center justify-center bg-white px-8 pb-8 fade-in">
+            <div class="max-w-xl w-full flex flex-col gap-3 text-center">
+                <h2 class="text-4xl font-thin text-blue-600">Statistik Buddies Coder</h2>
+                <h4 class="text-base text-center">Platform kami menjadi kegemaran ramai!</h4>
 
-                <div class="w-full grid grid-cols-1 lg:grid-cols-3 gap-8 text-center">
+                <div class="w-full grid grid-cols-1 lg:grid-cols-3 text-center">
 
                     <div class="flex items-end justify-center gap-2 s-min py-16 counting"
                         data-target="{{ \App\Models\User::count() }}"
                         style="background: url('/images/blob1.svg'); background-size: cover; background-repeat: no-repeat;background-position: center;">
-                        <h5 class="text-9xl text-blue-500">0</h5>
-                        <p class="text-2xl text-wrap">Jumlah <br />Pengguna</p>
+                        <h5 class="text-5xl text-blue-500">0</h5>
+                        <p class="text-base text-wrap">Jumlah <br />Pengguna</p>
                     </div>
 
                     <div class="flex items-end justify-center gap-2 s-min py-16 counting" data-target="20"
                         style="background: url('/images/blob2.svg'); background-size: cover; background-repeat: no-repeat;background-position: center;">
-                        <h5 class="text-9xl text-orange-400">0</h5>
-                        <p class="text-2xl text-wrap">Nota<br />Kaki</p>
+                        <h5 class="text-5xl text-orange-400">0</h5>
+                        <p class="text-base text-wrap">Nota<br />Kaki</p>
                     </div>
 
                     <div class="flex items-end justify-center gap-2 s-min py-16 counting"
                         data-target="{{ \App\Models\Result::count() }}"
                         style="background: url('/images/blob1.svg'); background-size: cover; background-repeat: no-repeat;background-position: center;">
-                        <h5 class="text-9xl text-blue-400">0</h5>
-                        <p class="text-2xl text-wrap">Kuiz <br />Dijawab</p>
+                        <h5 class="text-5xl text-blue-400">0</h5>
+                        <p class="text-xl text-wrap">Kuiz <br />Dijawab</p>
                     </div>
 
                 </div>
@@ -253,7 +246,7 @@
             <div class="flex flex-wrap gap-6 text-sm">
                 <a href="{{ url('dashboard') }}" class="hover:text-blue-400">Halaman Utama</a>
                 <a href="{{ route('learn.index') }}" class="hover:text-blue-400">Belajar</a>
-                <a href="{{ route('quiz.index') }}" class="hover:text-blue-400">Quiz</a>
+                <a href="{{ route('quiz.index') }}" class="hover:text-blue-400">Kuiz</a>
                 <a href="{{ route('rank.index') }}" class="hover:text-blue-400">Carta</a>
             </div>
 

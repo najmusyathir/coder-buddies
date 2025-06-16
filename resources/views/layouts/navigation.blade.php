@@ -19,7 +19,7 @@
                         {{ __('Belajar') }}
                     </x-nav-link>
                     <x-nav-link :href="route('quiz.index')" :active="request()->routeIs('quiz.index')">
-                        {{ __('Quiz') }}
+                        {{ __('Kuiz') }}
                     </x-nav-link>
                     <x-nav-link :href="route('rank.index')" :active="request()->routeIs('rank.index')">
                         {{ __('Carta') }}
